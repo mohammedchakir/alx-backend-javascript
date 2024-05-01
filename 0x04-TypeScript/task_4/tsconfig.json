@@ -1,0 +1,10 @@
+// File: task_4/tsconfig.json
+{
+    "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true
+    }
+}
