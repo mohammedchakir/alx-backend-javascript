@@ -1,10 +1,9 @@
-/* eslint-disable array-callback-return */
-export default function cleanSet (set, string) {
-  if (string === undefined || string.length === 0) {
+export default function cleanSet(xSet, xStartString) {
+  if (!xSet || !xStartString || !(xSet instanceof Set) || typeof xStartString !== 'string') {
     return '';
   }
-  return [...set]
-    .filter((str) => (str !== undefined ? str.startsWith(string) : ''))
-    .map((str) => (str !== undefined ? str.slice(string.length) : ''))
+  return Array.from(xSet)
+    .filter((ele) => ele && ele.startsWith(xStartString))
+    .map((ele) => ele.replace(xStartString, ''))
     .join('-');
 }
