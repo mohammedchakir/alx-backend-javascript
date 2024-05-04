@@ -4,5 +4,5 @@
  * @returns {Promise} A Promise that rejects with an Error containing the message if the file cannot be processed.
  */
 export default function uploadPhoto (filename) {
-  return Promise.reject(new Error(`${filename} cannot be processed`));
+  return Promise.reject(Error(`${filename} cannot be processed`));
 }
