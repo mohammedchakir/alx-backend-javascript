@@ -1,12 +1,7 @@
 export default function iterateThroughObject(reportWithIterator) {
-  let result = '';
-
-  for (const item of reportWithIterator) {
-    result += item + ' | ';
+  const returnString = [];
+  for (const report of reportWithIterator) {
+    returnString.push(report);
   }
-
-  // Remove the last ' | ' from the result
-  result = result.slice(0, -3);
-
-  return result;
+  return returnString.join(' | ');
 }
