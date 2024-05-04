@@ -1,20 +1,16 @@
-const cloneCarMethod = Symbol('cloneCar');
-
-class Car {
-  constructor(brand, motor, color) {
+export default class Car {
+  constructor(brand = null, motor = null, color = null) {
     this._brand = brand;
     this._motor = motor;
     this._color = color;
   }
 
-  [cloneCarMethod]() {
-    const constructor = Object.getPrototypeOf(this).constructor;
-    return new constructor(this._brand, this._motor, this._color);
-  }
-
   cloneCar() {
-    return this[cloneCarMethod]();
+    const clone = new this.constructor();
+    const symbols = Object.getOwnPropertySymbols(this);
+    symbols.forEach((symbol) => {
+      clone[symbol] = this[symbol];
+    });
+    return clone;
   }
 }
-
-export default Car;
