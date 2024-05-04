@@ -14,7 +14,7 @@ class HolbertonCourse {
   }
 
   // Getter and setter for name
-  get name () {
+  get name() {
     return this._name;
   }
 
@@ -26,7 +26,7 @@ class HolbertonCourse {
   }
 
   // Getter and setter for length
-  get length () {
+  get length() {
     return this._length;
   }
 
