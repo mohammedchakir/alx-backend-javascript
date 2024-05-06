@@ -4,7 +4,7 @@
 
 By Johann Kerbrat, Engineering Manager at Uber Works
 
-![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/12/817248fb77fb5c2cef3f.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20220619%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220619T232813Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=c219ffe33b9a4e14dc1d4d106f0698cdda69327bbde744fea0bd386e293f26d4)
+![817248fb77fb5c2cef3f](https://github.com/mohammedchakir/alx-interview/assets/129831433/0799de77-f744-4b06-8e95-b61c72ded2ef)
 
 ## Resources:
 

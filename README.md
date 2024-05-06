@@ -7,12 +7,12 @@
 This repository contains programs written for backend development using JavaScript.
 
 ## Structure:
-- [0x00. Node fundamentals](0x00-node_fundamentals)
-- [0x01. Express fundamentals](0x01-express_fundamentals)
-- [0x02. MongoDB fundamentals](0x02-mongodb_fundamentals)
-- [0x03. Authentication and authorization](0x03-authentication_and_authorization)
-- [0x04. Error handling and testing](0x04-error_handling_and_testing)
-- [0x05. Advanced topics](0x05-advanced_topics)
+- [0x00. ES6 Basics](0x00-ES6_basic)
+- [0x01. ES6 Promises](0x01-ES6_promise)
+- [0x02. ES6 classes](0x02-ES6_classes)
+- [0x03. ES6 data manipulation](0x03-ES6_data_manipulation)
+- [0x04. Typescript](0x04-TypeScript)
+
 
 ## Navigation Guide:
 
