@@ -1,39 +1,37 @@
 const fs = require('fs');
-const path = require('path');
 
-function countStudents (filePath) {
+function countStudents(fileName) {
+  const students = {};
+  const fields = {};
+  let length = 0;
   try {
-    const data = fs.readFileSync(filePath, 'utf8');
-    const lines = data.trim().split('\n');
-
-    if (lines.length === 0) {
-      throw new Error('Cannot load the database');
-    }
-
-    const students = lines.slice(1);
-    const studentCount = students.length;
-    console.log(`Number of students: ${studentCount}`);
-
-    const fields = {};
-    students.forEach((line) => {
-      const [firstname, lastname, age, field] = line.split(',');
-
-      if (!fields[field]) {
-        fields[field] = [];
-      }
-
-      fields[field].push(firstname);
-    });
-
-    for (const field in fields) {
-      if (Object.prototype.hasOwnProperty.call(fields, field)) {
-        const fieldCount = fields[field].length;
-        const fieldList = fields[field].join(', ');
-        console.log(`Number of students in ${field}: ${fieldCount}. List: ${fieldList}`);
+    const content = fs.readFileSync(fileName, 'utf-8');
+    const lines = content.toString().split('\n');
+    for (let i = 0; i < lines.length; i += 1) {
+      if (lines[i]) {
+        length += 1;
+        const field = lines[i].toString().split(',');
+        if (Object.prototype.hasOwnProperty.call(students, field[3])) {
+          students[field[3]].push(field[0]);
+        } else {
+          students[field[3]] = [field[0]];
+        }
+        if (Object.prototype.hasOwnProperty.call(fields, field[3])) {
+          fields[field[3]] += 1;
+        } else {
+          fields[field[3]] = 1;
+        }
       }
     }
-  } catch (err) {
-    throw new Error('Cannot load the database');
+    const l = length - 1;
+    console.log(`Number of students: ${l}`);
+    for (const [key, value] of Object.entries(fields)) {
+      if (key !== 'field') {
+        console.log(`Number of students in ${key}: ${value}. List: ${students[key].join(', ')}`);
+      }
+    }
+  } catch (error) {
+    throw Error('Cannot load the database');
   }
 }
 
