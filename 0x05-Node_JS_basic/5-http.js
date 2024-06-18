@@ -4,7 +4,7 @@ const { readFile } = require('fs');
 const hostname = '127.0.0.1';
 const port = 1245;
 
-function countStudents (fileName) {
+function countStudents(fileName) {
   const students = {};
   const fields = {};
   let length = 0;
