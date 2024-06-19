@@ -1,0 +1,15 @@
+{
+  "name": "task_0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "0-calcul.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "eslint-plugin-mocha": "^10.4.3",
+    "mocha": "^10.2.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
